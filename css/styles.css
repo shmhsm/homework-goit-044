@@ -1,476 +1,570 @@
-<!DOCTYPE html>
-<html lang="en">
+body {
+    background-color: #FFFFFF;
+    color: #434455;
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Effective Solutions for Your Business</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
-        integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+p {
+    margin: 0;
+}
 
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
 
-<body>
-    <header class="page-header">
-        <div class="container container-header">
-            <nav class="navigation-tag">
-                <a class="logo" href="./index.html">WEB<span class="logo-span">Studio</span></a>
-
-                <ul class="navigation">
-                    <li class="navig-list">
-                        <a class="studio current" href="./index.html">Studio</a>
-                    </li>
-                    <li class="navig-list">
-                        <a class="studio" href="">Portfolio</a>
-                    </li>
-                    <li class="navig-list navig-end">
-                        <a class="studio" href="">Contacts</a>
-                    </li>
-                </ul>
-            </nav>
-            <address class="info">
-                <ul class="address">
-                    <li class="first-hujnia">
-                        <a class="mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
-                    </li>
-                    <li class="second-hujnia">
-                        <a class="telef" href="tel:+110001111111">+11 (000) 111-11-11</a>
-                    </li>
-                </ul>
-            </address>
-        </div>
-    </header>
+img {
+    display: block;
+}
 
 
-    <main>
-        <section class="first-section">
-            <div class="container container-main">
-                <h1 class="title-main">Effective Solutions <br>for Your Business</h1>
+
+.container {
+    display: flex;
+    max-width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-header {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-header {
+    line-height: 1.5;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #e7e9fc;
+    box-shadow: 
+    0px 2px 1px rgba(46, 47, 66, 0.08), 
+    0px 1px 1px rgba(46, 47, 66, 0.16), 
+    0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.navigation-tag {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.03em;
+    line-height: 1.17;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #4d5ae5;
+
+    margin-right: 76px;
+}
+
+.logo-span {
+    color: #2E2F42;
+}
+
+.navigation {
+    display: flex;
+    gap: 40px;
+}
+
+.navigation .studio {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #2E2F42;
+    font-weight: 500;
+}
+
+.navigation a:hover {
+    color: #404BBF;
+}
+
+.navigation a:focus {
+    color: #404BBF;
+}
+
+.navig-end {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+
+    margin-right: 0px;
+}
+
+.studio {
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    padding: 24px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.studio.current {
+    color: #404bbf;
+}
+
+.studio.current::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+}
+
+.studio a:hover {
+    color: #404bbf;
+}
+
+.studio a:focus {
+    color: #404bbf;
+}
+
+.address {
+    display: flex;
+}
+
+.info {
+    font-style: normal;
+
+}
+
+.info a {
+    text-decoration: none;
+}
+
+.address .first-hujnia,
+.second-hujnia {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+}
+
+.mail {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: #434455;
+    gap: 40px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.first-hujnia {
+    margin-right: 40px;
+}
+
+.telef {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: #434455;
+    margin-right: 0px;
+    gap: 40px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.second-hujnia {
+    margin-right: 0;
+}
+
+.info a:hover {
+    color: #404bbf;
+}
+
+.info a:focus {
+    color: #404bbf;
+}
 
 
-                <button class="btn" type="button">Order Service</button>
-            </div>
-        </section>
+
+.first-section {
+    background-color: #2E2F42;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/ofice.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding: 188px 0;
+}
+
+.container-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    max-width: 1440px;
+}
+
+.title-main {
+    text-align: center;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+
+    max-width: 496px;
+    margin: 0 auto 48px;
+}
+
+.btn {
+    display: block;
+    margin: 0 auto;
+    background-color: #4D5AE5;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    min-width: 169px;
+    height: 56px;
+    border-radius: 4px;
+    border: none;
+}
+
+button:hover {
+    background-color: #404BBF;
+}
+
+button:focus {
+    background-color: #404BBF;
+}
 
 
-        <section class="second-sec">
-            <div class="container">
-                <h2 class="visually-hidden">Our priorities</h2>
-                <ul class="list-prio">
 
-                    <li class="frst-pic">
-                        <div class="boxes">
-                            <svg width="64" height="64">
-                                <use href="./images/icons.svg#icon-antenna-1-1"></use>
-                            </svg>
-                        </div>
-                        <h3 class="title-prio">Strategy</h3>
-                        <p class="p-prio">Our goal is to identify the business
-                            problem to walk away with the perfect and
-                            creative solution.
-                    </li>
+.second-sec {
+    padding: 120px 0;
+}
 
-                    <li class="frst-pic">
-                        <div class="boxes">
-                            <svg width="64" height="64">
-                                <use href="./images/icons.svg#icon-clock-1-1"></use>
-                            </svg>
-                        </div>
-                        <h3 class="title-prio">Punctuality</h3>
-                        <p class="p-prio">Bring the key message to the brand's
-                            audience for the best price within
-                            the shortest possible time.
-                        </p>
-                    </li>
+.boxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    margin-bottom: 8px;
+}
 
-                    <li class="frst-pic">
-                        <div class="boxes">
-                            <svg width="64" height="64">
-                                <use href="./images/icons.svg#icon-diagram-1-1"></use>
-                            </svg>
-                        </div>
-                        <h3 class="title-prio">Diligence</h3>
-                        <p class="p-prio">Research and confirm brands with the
-                            strongest digital growth opportunities
-                            and minimize risk.
-                        </p>
-                    </li>
+.list-prio {
+    display: flex;
+    gap: 24px;
+}
 
-                    <li class="frst-pic">
-                        <div class="boxes">
-                            <svg width="64" height="64">
-                                <use href="./images/icons.svg#icon-astronaut-1-1"></use>
-                            </svg>
-                        </div>
-                        <h3 class="title-prio">Technologies</h3>
-                        <p class="p-prio">Design practice focused on digital
-                            experiences. We bring forth a deep
-                            passion for problem-solving.
-                        </p>
-                    </li>
-                </ul>
-            </div>
-        </section>
+.frst-pic {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+}
 
-        <section class="third-sec">
-            <div class="container container-team">
-                <h2 class="title">Our Team</h2>
-                <ul class="list-team">
-                    <li class="hiro">
-                        <img src="./images/man1.jpg" alt="Mark Guerrero">
-                        <div class="container-list-port">
-                            <h3 class="title-team">Mark Guerrero</h3>
-                            <p class="team-p">Product Designer</p>
+.title-prio {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
 
-                            <div class="social-media">
-                                <ul class="social-ul">
-                                    <li class="social-li">
-                                        <a class="social-link transition-bg" href="#">
-                                            <svg class="social-svg" width="16" height="16">
-                                                <use href="./images/icons.svg#icon-instagram-2-1"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social-li">
-                                        <a class="social-link" href="#">
-                                            <svg class="social-svg" width="16" height="16">
-                                                <use href="./images/icons.svg#icon-twitter-1-1"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social-li">
-                                        <a class="social-link" href="#">
-                                            <svg class="social-svg" width="16" height="16">
-                                                <use href="./images/icons.svg#icon-facebook-1-1"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social-li">
-                                        <a class="social-link" href="#">
-                                            <svg class="social-svg" width="16" height="16">
-                                                <use href="./images/icons.svg#icon-linkedin-1-1"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+    margin-bottom: 8px;
+}
 
-                        </div>
-                    </li>
-                    <li class="hiro">
-                        <img src="./images/man2.jpg" alt="Tom Ford">
-                        <div class="container-list-port">
-                            <h3 class="title-team">Tom Ford</h3>
-                            <p class="team-p">Frontend Developer</p>
-                            
-                            <div class="social-media">
-                                <ul class="social-ul">
-                                    <li class="social-li">
-                                        <a class="social-link transition-bg" href="#">
-                                            <svg class="social-svg" width="16" height="16">
-                                                <use href="./images/icons.svg#icon-instagram-2-1"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social-li">
-                                        <a class="social-link" href="#">
-                                            <svg class="social-svg" width="16" height="16">
-                                                <use href="./images/icons.svg#icon-twitter-1-1"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social-li">
-                                        <a class="social-link" href="#">
-                                            <svg class="social-svg" width="16" height="16">
-                                                <use href="./images/icons.svg#icon-facebook-1-1"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social-li">
-                                        <a class="social-link" href="#">
-                                            <svg class="social-svg" width="16" height="16">
-                                                <use href="./images/icons.svg#icon-linkedin-1-1"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="hiro">
-                        <img src="./images/woman3.jpg" alt="Camila Garcia">
-                        <div class="container-list-port">
-                            <h3 class="title-team">Camila Garcia</h3>
-                            <p class="team-p">Marketing</p>
-                            
-                            <div class="social-media">
-                                <ul class="social-ul">
-                                    <li class="social-li">
-                                        <a class="social-link transition-bg" href="#">
-                                            <svg class="social-svg" width="16" height="16">
-                                                <use href="./images/icons.svg#icon-instagram-2-1"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social-li">
-                                        <a class="social-link" href="#">
-                                            <svg class="social-svg" width="16" height="16">
-                                                <use href="./images/icons.svg#icon-twitter-1-1"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social-li">
-                                        <a class="social-link" href="#">
-                                            <svg class="social-svg" width="16" height="16">
-                                                <use href="./images/icons.svg#icon-facebook-1-1"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social-li">
-                                        <a class="social-link" href="#">
-                                            <svg class="social-svg" width="16" height="16">
-                                                <use href="./images/icons.svg#icon-linkedin-1-1"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="hiro">
-                        <img src="./images/man4.jpg" alt="Daniel Wilson">
-                        <div class="container-list-port">
-                            <h3 class="title-team">Daniel Wilson</h3>
-                            <p class="team-p">UI Designer</p>
-                            
-                            <div class="social-media">
-                                <ul class="social-ul">
-                                    <li class="social-li">
-                                        <a class="social-link transition-bg" href="#">
-                                            <svg class="social-svg" width="16" height="16">
-                                                <use href="./images/icons.svg#icon-instagram-2-1"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social-li">
-                                        <a class="social-link" href="#">
-                                            <svg class="social-svg" width="16" height="16">
-                                                <use href="./images/icons.svg#icon-twitter-1-1"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social-li">
-                                        <a class="social-link" href="#">
-                                            <svg class="social-svg" width="16" height="16">
-                                                <use href="./images/icons.svg#icon-facebook-1-1"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="social-li">
-                                        <a class="social-link" href="#">
-                                            <svg class="social-svg" width="16" height="16">
-                                                <use href="./images/icons.svg#icon-linkedin-1-1"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
+.visually-hidden {
+    max-width: 496px;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
-        <section class="fourth-sec">
 
-            <div class="container container-list-port">
-                <h2 class="title">Our Portfolio</h2>
 
-                <ul class="list-portf">
-                    <li class="list-list">
 
-                        <div class="container-image">
-                            <p class="hidden-p">14 Stylish and
-                                User-Friendly App Design Concepts ·
-                                Task Manager App · Calorie Tracker App ·
-                                Exotic Fruit Ecommerce App ·
-                                Cloud Storage App
-                            </p>
 
-                        <img src="./images/1stpic.jpg" alt="Banking App" width="370" height="301">
-                        
-                        </div>
+.third-sec {
+    padding: 120px 0;
+    background-color: #F4F4FD;
+}
 
-                        <div class="details-portf">
-                            <h3 class="portfolio-subtitle">Banking App</h3>
-                            <p class="portfolio-category">App</p>
-                        </div>
+.container-team {
+    display: flex;
+    flex-direction: column;
+}
 
-                    </li>
+.list-team {
+    display: flex;
+    gap: 24px;
+}
 
-                    <li class="list-list">
+.title {
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #2e2f42;
 
-                        <div class="container-image">
-                            <p class="hidden-p">14 Stylish and
-                                User-Friendly App Design Concepts ·
-                                Task Manager App · Calorie Tracker App ·
-                                Exotic Fruit Ecommerce App ·
-                                Cloud Storage App
-                            </p>
+    margin-bottom: 72px;
+}
 
-                        <img src="./images/2ndpic.jpg" alt="Cashless Payment" width="370" height="301">
-                        </div>
-                        
-                        <div class="details-portf">
-                            <h3 class="portfolio-subtitle">Cashless Payment</h3>
-                            <p class="portfolio-category">Marketing</p>
-                        </div>
+.hiro {
+    background-color: #FFFFFF;
+    flex-basis: calc((100% - 72px) / 4);
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 
-                    </li>
+.title-team {
+    text-align: center;
+    margin-bottom: 8px;
+}
 
-                    <li class="list-list">
-                        
-                        <div class="container-image">
-                            <p class="hidden-p">14 Stylish and
-                                User-Friendly App Design Concepts ·
-                                Task Manager App · Calorie Tracker App ·
-                                Exotic Fruit Ecommerce App ·
-                                Cloud Storage App
-                            </p>
+.container-list-port {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
 
-                        <img src="./images/3rdpic.jpg" alt="Meditation App" width="370" height="301">
-                        </div>
-                        
-                        <div class="details-portf">
-                            <h3 class="portfolio-subtitle">Meditation App</h3>
-                            <p class="portfolio-category">App</p>
-                        </div>
+.team-p {
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+    color: #434455;
+}
 
-                    </li>
-        
-                    <li class="list-list">
-                        
-                        <div class="container-image">
-                            <p class="hidden-p">14 Stylish and
-                                User-Friendly App Design Concepts ·
-                                Task Manager App · Calorie Tracker App ·
-                                Exotic Fruit Ecommerce App ·
-                                Cloud Storage App
-                            </p>
+.social-ul {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
 
-                        <img src="./images/4thpic.jpg" alt="Taxi Service" width="370" height="301">
-                        </div>
-                        
-                        <div class="details-portf">
-                            <h3 class="portfolio-subtitle">Taxi Service</h3>
-                            <p class="portfolio-category">Marketing</p>
-                        </div>
+.social-li {
+    width: 40px;
+    height: 40px;
+}
 
-                    </li>
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    margin: 8px 0;
+}
 
-                    <li class="list-list">
-                        
-                        <div class="container-image">
-                            <p class="hidden-p">14 Stylish and
-                                User-Friendly App Design Concepts ·
-                                Task Manager App · Calorie Tracker App ·
-                                Exotic Fruit Ecommerce App ·
-                                Cloud Storage App
-                            </p>
+.social-link:hover,
+.social-link:focus {
+    background-color: #404bbf;
+}
 
-                        <img src="./images/5thpic.jpg" alt="Screen Illustrations" width="370" height="301">
-                        </div>
-                        
-                        <div class="details-portf">
-                            <h3 class="portfolio-subtitle">Screen Illustrations</h3>
-                            <p class="portfolio-category">Design</p>
-                        </div>
+.transition-bg {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-                    </li>
+.social-svg {
+    fill:#f4f4fd;
+}
 
-                    <li class="list-list">
-                        
-                        <div class="container-image">
-                            <p class="hidden-p">14 Stylish and
-                                User-Friendly App Design Concepts ·
-                                Task Manager App · Calorie Tracker App ·
-                                Exotic Fruit Ecommerce App ·
-                                Cloud Storage App
-                            </p>
 
-                        <img src="./images/6thpic.jpg" alt="Online Courses" width="370" height="301">
-                        </div>
-                        
-                        <div class="details-portf">
-                            <h3 class="portfolio-subtitle">Online Courses</h3>
-                            <p class="portfolio-category">Marketing</p>
-                        </div>
 
-                    </li>
+.fourth-sec {
+    padding: 120px 0;
+}
 
-                </ul>
-            </div>
-        </section>
-    </main>
+.container-list-port {
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+}
 
-    <footer class="footer">
-        <div class="container container-footer">
-            <div class="container-logo-p">
-            <a class="logo logo-footer" href="./index.html">WEB<span class="span-footer">Studio</span></a>
-            <p class="p-footer">
-                Increase the flow of customers and
-                <br>sales for your business with digital
-                <br>marketing & growth solutions.
-            </p>
-            </div>
-            <div class="social-container">
-                <p class="paragraph-footer">
-                    Social media
-                </p>
-                <ul class="footer-ul">
-                    <li class="footer-li">
-                        <a class="footer-a" href="">
-                            <svg class="footer-svg" width="24" height="24">
-                                <use href="./images/icons.svg#icon-instagram-2-1">
-                                </use>
-                                </svg>
-                        </a>
-                    </li>
-                    <li class="footer-li">
-                        <a class="footer-a" href="">
-                            <svg class="footer-svg" width="24" height="24">
-                                <use href="./images/icons.svg#icon-twitter-1-1">
-                                </use>
-                                </svg>
-                        </a>
-                    </li>
-                    <li class="footer-li">
-                        <a class="footer-a" href="">
-                            <svg class="footer-svg" width="24" height="24">
-                                <use href="./images/icons.svg#icon-facebook-1-1">
-                                </use>
-                                </svg>
-                        </a>
-                    </li>
-                    <li class="footer-li">
-                        <a class="footer-a" href="">
-                            <svg class="footer-svg" width="24" height="24">
-                                <use href="./images/icons.svg#icon-linkedin-1-1">
-                                </use>
-                                </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-</body>
+.list-portf {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+}
 
-</html>
+.list-list {
+    width: calc((100% - 2*24px) / 3);
+    box-sizing: border-box;
+    flex-shrink: 0;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list-list:hover {
+    box-shadow:
+        0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+    cursor: pointer;
+}
+
+/* При ховері рухаємо параграф */
+.list-list:hover .overlay-text {
+    transform: translateY(0%);
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    padding: 40px 32px;
+    background-color: #4d5ae5;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+}
+
+.portfolio-img {
+    display: block;
+    width: 100%;
+    z-index: 1;
+}
+
+.details-portf {
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+}
+
+.portfolio-subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    margin-bottom: 8px;
+}
+
+.portfolio-category {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+
+
+
+
+
+.footer {
+    background-color: #2E2F42;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.container .container-footer {
+    display: block;
+    flex-direction: column;
+}
+
+.container-footer {
+    align-items: baseline;
+}
+
+.logo-footer {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.span-footer {
+    color: #f4f4fd;
+}
+
+.p-footer {
+    color: #F4F4FD;
+    letter-spacing: 0.02em;
+}
+
+.container-logo-p {
+    margin-right: 120px;
+
+}
+
+.paragraph-footer {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.footer-ul {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-li {
+    width: 40px;
+    height: 40px;
+    
+}
+
+.footer-a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-a:hover {
+    background-color: #31d0aa;
+}
+
+.footer-a:focus {
+    background-color: #31d0aa;
+}
+
+.footer-svg {
+    fill: #f4f4fd;
+}
