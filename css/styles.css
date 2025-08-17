@@ -159,7 +159,7 @@ img {
 .second-hujnia {
     padding-top: 24px;
     padding-bottom: 24px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .mail {
@@ -167,6 +167,7 @@ img {
     letter-spacing: 0.02em;
     color: #434455;
     gap: 40px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .first-hujnia {
@@ -179,6 +180,7 @@ img {
     color: #434455;
     margin-right: 0px;
     gap: 40px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .second-hujnia {
@@ -368,7 +370,6 @@ button:focus {
 .social-li {
     width: 40px;
     height: 40px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link {
@@ -379,6 +380,8 @@ button:focus {
     height: 100%;
     background-color: #4d5ae5;
     border-radius: 50%;
+    margin: 8px 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover {
@@ -500,6 +503,9 @@ button:focus {
 .container .container-footer {
     display: block;
     flex-direction: column;
+}
+
+.container-footer {
     align-items: baseline;
 }
 
@@ -539,7 +545,7 @@ button:focus {
 .footer-li {
     width: 40px;
     height: 40px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .footer-a {
@@ -550,6 +556,7 @@ button:focus {
     height: 100%;
     background-color: #4d5ae5;
     border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-a:hover {
